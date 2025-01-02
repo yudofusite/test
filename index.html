@@ -39,10 +39,18 @@
     }
     .editor {
       position: relative;
-      width: 50vw;
-      height: 30vw;
+      width: 60vw;
+      height: 40vw;
       border: 2px solid #000000;
       left: 5px;
+      top: 5px;
+    }
+    .menubg {
+      position: relative;
+      width: 35vw;
+      height: 40vw;
+      background: #dddddd;
+      left: 65vw;
       top: 5px;
     }
   </style>
@@ -50,6 +58,7 @@
 <body>
   <div class="header">yudofu-act-system<span class="play" title="【実行する】：ゲームのプレイ画面に進みます">▶</span></div>
   <canvas id="editor" class="editor"></canvas>
+  <span class="menubg"></span>
   <script src="ac.js"></script>
   <noscript>
     <b>Javascriptを有効にしてね</b>
