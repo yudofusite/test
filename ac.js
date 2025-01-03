@@ -4,6 +4,8 @@ editor.setAttribute("width","600px");
 editor.setAttribute("height","400px");
 let ca0 = editor.getContext("2d");
 
+console.log(editor.width);
+
 let mousex = 0;
 let mousey = 0;
 editor.onmousemove = function(mevent) {
