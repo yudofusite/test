@@ -10,8 +10,9 @@ let mousex = 0;
 let mousey = 0;
 editor.onmousemove = function(mevent) {
 mousex = mevent.offsetX;
-mousex = mousex * (600 / editor.clientWidth)
+mousex = mousex * (600 / editor.clientWidth);
 mousey = mevent.offsetY;
+mousey = mousey * (400 / editor.clientHeight);
 ca0.clearRect(0, 0, 600, 400);
 ca0.fillRect(mousex, mousey, 4, 4);
 };
