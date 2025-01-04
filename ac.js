@@ -21,7 +21,9 @@ let md = 0;    //マウス押下（1）
 
 addEventListener("mousedown",function() {
   md = 1;
+  console.log(md)
 })
 addEventListener("mouseup",function() {
   md = 0;
+  console.log(md)
 })
