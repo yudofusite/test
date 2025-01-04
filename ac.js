@@ -30,5 +30,5 @@ addEventListener("mouseup",function() {
 //メインループ
 let mainLoop = setInterval(function() {
   ca0.clearRect(0, 0, 600, 400);
-  ca0.fillRect(mousex, mousey, 4, 4);
+  ca0.fillRect(mousex - 2, mousey - 2, 4, 4);
 },1000 / 60);
