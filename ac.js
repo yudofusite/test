@@ -16,3 +16,12 @@ mousey = mousey * (400 / editor.clientHeight);
 ca0.clearRect(0, 0, 600, 400);
 ca0.fillRect(mousex, mousey, 4, 4);
 };
+
+let md = 0;    //マウス押下（1）
+
+addEventListener("mousedown",function() {
+  md = 1;
+})
+addEventListener("mouseup",function() {
+  md = 0;
+}
