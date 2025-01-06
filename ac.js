@@ -39,7 +39,7 @@ let new_map_edit = document.getElementById("new_map");
 let map_num_in = document.getElementById("nowmapinput");
 new_map_edit.addEventListener("click",function() {
   mapdate.push([30]);
-  map_num_in.max = mapdate.length - 1;
-  map_num_in.value = mapdate.length - 1;
+  map_num_in.max = mapdate.length;
+  map_num_in.value = mapdate.length;
   console.log("new_map" + mapdate.length);
 });
