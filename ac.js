@@ -34,3 +34,9 @@ let mainLoop = setInterval(function() {
 },1000 / 60);
 
 let mapdate = [];    //マップデータ。
+
+let new_map_edit = document.getElementById("new_map");
+new_map_edit.addEventListener("click",function() {
+  mapdate.push([60]);
+  console.log("new_map" + mapdate.length);
+});
