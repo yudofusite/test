@@ -33,12 +33,12 @@ let mainLoop = setInterval(function() {
   ca0.fillRect(mousex - 2, mousey - 2, 4, 4);
 },1000 / 60);
 
-let mapdate = [];    //マップデータ。
+let mapdate = [[30]];    //マップデータ。
 
 let new_map_edit = document.getElementById("new_map");
 let map_num_in = document.getElementById("nowmapinput");
 new_map_edit.addEventListener("click",function() {
-  mapdate.push([60]);
+  mapdate.push([30]);
   map_num_in.max = mapdate.length - 1;
   map_num_in.value = mapdate.length - 1;
   console.log("new_map" + mapdate.length);
