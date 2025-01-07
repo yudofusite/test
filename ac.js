@@ -31,8 +31,8 @@ addEventListener("mouseup",function() {
 let mainLoop = setInterval(function() {
   ca0.clearRect(0, 0, 600, 400);
   ca0.fillRect(mousex - 2, mousey - 2, 4, 4);
-  if (mapdate.length > 0) {
-    
+  if (mapdate.length > 0) {    //参照するマップデータが存在する場合
+    editor_edit()
   }
 },1000 / 60);
 
