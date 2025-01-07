@@ -64,7 +64,7 @@ function data_format(dfnum) {      //30 x 20配置、[[横の長さ],[一列目�
   for (var dfi = 0; dfi < 20;  dfi++) {
     mapdate[dfnum].push([]);
     for (var dfi2 = 0; dfi2 < 30; dfi2++) {
-      mapdate[dfnum][dfi2].push(0);
+      mapdate[dfnum][dfi].push(0);
     }
   }
 }
