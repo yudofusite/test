@@ -27,10 +27,13 @@ addEventListener("mouseup",function() {
 })
 //--------------
 
-//メインループ
+//描画メインループ
 let mainLoop = setInterval(function() {
   ca0.clearRect(0, 0, 600, 400);
   ca0.fillRect(mousex - 2, mousey - 2, 4, 4);
+  if (mapdate.length > 0) {
+    
+  }
 },1000 / 60);
 
 let mapdate = [[30]];    //マップデータ。
@@ -45,3 +48,8 @@ new_map_edit.addEventListener("click",function() {
   console.log("new_map" + mapdate.length);
   maxvm.textContent = "/" + mapdate.length;
 });
+
+function editor_edit() {
+  ca0.strokeStyle = "#000030";
+  ca0.lineWidth = 2;
+}
