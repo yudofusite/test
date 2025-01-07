@@ -37,7 +37,9 @@ let mainLoop = setInterval(function() {
 },1000 / 60);
 
 let mapdate = [[30]];    //マップデータ。
+data_format(0);
 
+let now_edit = 1;      //現在編集中のマップ
 let new_map_edit = document.getElementById("new_map");
 let map_num_in = document.getElementById("nowmapinput");
 let maxvm = document.getElementById("maxvm");
@@ -45,6 +47,8 @@ new_map_edit.addEventListener("click",function() {
   mapdate.push([30]);
   map_num_in.max = mapdate.length;
   map_num_in.value = mapdate.length;
+  now_edit = map_num_in.value;
+  data_format(now_edit - 1);
   console.log("new_map" + mapdate.length);
   maxvm.textContent = "/" + mapdate.length;
 });
@@ -52,4 +56,15 @@ new_map_edit.addEventListener("click",function() {
 function editor_edit() {
   ca0.strokeStyle = "#000030";
   ca0.lineWidth = 2;
+}
+
+function data_format(dfnum) {      //30 x 20配置、[[横の長さ],[一列目データ],[二列目データ]]
+    mapdate[dfnum] = [];            //マップデータ新規設定　dfnumの値は配列番号（編集中のマップ番号-1）
+    mapdate[dfnum].push([30]);
+  for (var dfi = 0; dfi < 20;  dfi++) {
+    mapdate[dfnum].push([]);
+    for (var dfi2 = 0; dfi2 < 30; dfi++) {
+      mapdate[dfnum][dfi2].push(0);
+    }
+  }
 }
